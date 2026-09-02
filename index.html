@@ -3,18 +3,167 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Airel Musta'qim — IT Portfolio</title>
-<!--
-  ============================================================
-  HOW TO EDIT THIS FILE
-  Every place you should personalize is marked with a comment
-  like <!-- EDIT: ... -->. Just replace the text right after
-  that comment — don't touch anything inside < > tags.
-  ============================================================
--->
+<title>IT Portfolio</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- ============================================================================
+     EVERYTHING YOU NEED TO EDIT IS RIGHT HERE. NOTHING ELSE IN THIS FILE.
+     Just change the text between the quotes " " below.
+     Do NOT delete commas, quotes, or brackets — only the text inside them.
+     ============================================================================ -->
+<script>
+const SITE = {
+
+  // ---- YOU ----
+  name: "Muhammad Airel Musta'qim",
+  fullName: "Muhammad Airel Musta'qim Bin Affendi",
+  initials: "A.M",
+  course: "Diploma in Information Technology, UTHM",
+  location: "UTHM Pagoh Campus is located at KM 1, Jalan Panchor, 84600 Panchor, Pagoh, Johor, Malaysia",
+  updated: "September 2026",
+
+  // ---- HOME / HERO ----
+  heroHeadline: "IT student who likes building games as much as breaking down how things work.",
+  heroIntro: "My name is Airel, a student taking Diploma in Information Technology student at UTHM. This page is a short, honest look at who I am and what I have achieved in life.",
+
+  // ---- ABOUT ----
+  aboutHeading: "A bit about me",
+  aboutParagraphs: [
+    "I'm 18 years old and currently studying at UTHM, about to start Semester 1 of my Diploma in Information Technology soon.",
+    "Before this, I studied at The Malay College Kuala Kangsar from Form 1 to Form 4, then finished my SPM at SMK Datuk Onn Butterworth.",
+    "Outside of class I am a handball player, guitarist, and game developer for fun."
+  ],
+
+  // ---- PROJECTS ----
+  // Copy/paste a whole { ... } block below to add another project.
+  projects: [
+    {
+      stack: "Roblox Studio · Lua",
+      title: "A Roblox game that got bought by a YouTuber",
+      desc: "I built a Roblox game as a personal project, and a YouTuber ended up buying it for $5 and making a whole video about it. It's still one of my favorite things I've made.",
+      tags: ["solo project", "game dev"],
+      role: "solo developer",
+      note: "Sold to a YouTuber for $5",
+      link: "https://www.youtube.com/watch?v=ucI5fOB8u3U&t=7s",
+      linkText: "watch the video →"
+    }
+  ],
+
+  // ---- ETHICS & SAFETY ----
+  // Kept short — these are quick, honest notes on how this site was made.
+  ethicsIntro: "A few quick notes on how this site was put together:",
+  ethics: [
+    "Everything shown here is my own work as well as help from AI, and I don't post anyone else's personal info without asking them first.",
+    "The video linked above belongs to its original creator — I'm only linking to it, not copying it.",
+    "My accounts (email, GitHub) use strong passwords and two-factor authentication."
+  ],
+
+  // ---- CONTACT ----
+  contact: {
+    email: "m.airelmustaqim01@gmail.com",
+    github: "github.com/ArelQim",
+    linkedin: "linkedin.com/in/airel-mustaqim/",
+    funFactLabel: "Fun fact",
+    funFact: "I once sold a Roblox game I built to a YouTuber for $5 — worth way more than $5 in bragging rights."
+  },
+
+  // ---- FOOTER ----
+  footerYear: "2026"
+
+};
+</script>
+<!-- ============================================================================
+     STOP EDITING HERE. Everything below builds the page automatically
+     from what you filled in above — you don't need to touch it.
+     ============================================================================ -->
+
+<div class="grid-bg"></div>
+
+<div class="layout">
+
+  <nav class="rail">
+    <div>
+      <a class="brand" href="#top">
+        <div class="brand-mark" id="nav-initials"></div>
+        <span class="brand-name" id="nav-name"></span>
+        <span class="brand-role" id="nav-role"></span>
+      </a>
+
+      <div class="rail-nav">
+        <a href="#about"><span class="n">01</span> about</a>
+        <a href="#projects"><span class="n">02</span> projects</a>
+        <a href="#ethics"><span class="n">03</span> ethics-and-safety</a>
+        <a href="#contact"><span class="n">04</span> contact</a>
+      </div>
+    </div>
+
+    <div class="rail-foot">
+      <span id="rail-location"></span><br>
+      <span id="rail-updated"></span>
+    </div>
+  </nav>
+
+  <main>
+
+    <section class="hero" id="top">
+      <span class="path-label">/home</span>
+      <h1 id="hero-heading"></h1>
+      <p class="role-line" id="hero-intro"></p>
+    </section>
+
+    <section id="about">
+      <span class="path-label">/about</span>
+      <h2 id="about-heading" style="font-size:1.9rem;margin-bottom:22px;"></h2>
+      <div id="about-paragraphs" class="about-text"></div>
+    </section>
+
+    <section id="projects">
+      <span class="path-label">/projects</span>
+      <div class="section-head">
+        <h2>Selected work</h2>
+      </div>
+      <div class="project-list" id="projects-list"></div>
+    </section>
+
+    <section id="ethics">
+      <span class="path-label">/ethics-and-safety</span>
+      <div class="section-head">
+        <h2>How this site was built responsibly</h2>
+      </div>
+      <p class="desc" id="ethics-intro" style="margin-bottom:20px;"></p>
+      <ul class="ethics-list" id="ethics-list"></ul>
+    </section>
+
+    <section id="contact">
+      <span class="path-label">/contact</span>
+      <div class="section-head">
+        <h2>Get in touch</h2>
+      </div>
+      <div class="contact-wrap">
+        <div class="contact-card">
+          <h3>Reach me</h3>
+          <div class="contact-row"><span class="lab">email</span><span id="contact-email"></span></div>
+          <div class="contact-row"><span class="lab">github</span><a id="contact-github" target="_blank" rel="noopener"></a></div>
+          <div class="contact-row"><span class="lab">linkedin</span><a id="contact-linkedin" target="_blank" rel="noopener"></a></div>
+        </div>
+        <div class="contact-card">
+          <h3 id="funfact-label"></h3>
+          <p style="font-size:0.88rem;color:var(--ink-soft);" id="contact-funfact"></p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<footer>
+  <span>© <span id="footer-year"></span> <span id="footer-name"></span></span>
+</footer>
+
 <style>
   :root{
     --ink:#182338;
@@ -26,8 +175,6 @@
     --brass-deep:#8f6420;
     --pine:#38564C;
     --pine-soft:#e6ece9;
-    --danger:#8a3b2f;
-    --radius:2px;
   }
   *{box-sizing:border-box;}
   html{scroll-behavior:smooth;}
@@ -41,7 +188,6 @@
   }
   ::selection{background:var(--brass);color:var(--paper-raise);}
 
-  /* background texture: faint blueprint grid */
   .grid-bg{
     position:fixed;inset:0;z-index:0;pointer-events:none;
     background-image:
@@ -61,22 +207,15 @@
     letter-spacing:-0.01em;
   }
 
-  .mono{
-    font-family:'IBM Plex Mono',monospace;
-    font-size:0.8rem;
-    color:var(--ink-soft);
-  }
-
   .layout{
     display:grid;
     grid-template-columns:260px 1fr;
-    max-width:1280px;
+    max-width:1100px;
     margin:0 auto;
     position:relative;
     z-index:1;
   }
 
-  /* ---- Sidebar / directory nav ---- */
   nav.rail{
     position:sticky;
     top:0;
@@ -87,10 +226,7 @@
     flex-direction:column;
     justify-content:space-between;
   }
-  .brand{
-    display:block;
-    text-decoration:none;
-  }
+  .brand{display:block;text-decoration:none;}
   .brand-mark{
     width:38px;height:38px;
     border:1.5px solid var(--ink);
@@ -108,6 +244,7 @@
     font-weight:600;
     color:var(--ink);
     line-height:1.25;
+    display:block;
   }
   .brand-role{
     font-family:'IBM Plex Mono',monospace;
@@ -130,10 +267,7 @@
     border-bottom:1px solid transparent;
     transition:color .15s ease, border-color .15s ease;
   }
-  .rail-nav a:hover, .rail-nav a.active{
-    color:var(--ink);
-    border-color:var(--line);
-  }
+  .rail-nav a:hover{color:var(--ink);border-color:var(--line);}
   .rail-nav a .n{color:var(--brass-deep);}
 
   .rail-foot{
@@ -142,17 +276,9 @@
     color:var(--ink-soft);
     line-height:1.7;
   }
-  .status-dot{
-    display:inline-block;width:7px;height:7px;border-radius:50%;
-    background:var(--pine);margin-right:7px;
-  }
 
-  /* ---- Main content ---- */
-  main{padding:0 0 120px 0;}
-  section{
-    padding:96px 72px;
-    border-bottom:1px solid var(--line);
-  }
+  main{padding:0 0 100px 0;}
+  section{padding:80px 64px;border-bottom:1px solid var(--line);}
   section:last-child{border-bottom:none;}
 
   .path-label{
@@ -163,107 +289,37 @@
     display:block;
   }
 
-  /* Hero */
-  .hero{padding-top:80px;}
+  .hero{padding-top:70px;}
   .hero h1{
-    font-size:clamp(2.4rem, 5vw, 3.6rem);
-    max-width:16ch;
-    line-height:1.08;
+    font-size:clamp(2.2rem, 4.5vw, 3.2rem);
+    max-width:18ch;
+    line-height:1.1;
   }
   .hero .role-line{
-    margin-top:22px;
+    margin-top:20px;
     max-width:52ch;
     color:var(--ink-soft);
-    font-size:1.08rem;
-  }
-  .hero-badges{
-    margin-top:40px;
-    display:flex;
-    gap:0;
-    flex-wrap:wrap;
-    border-top:1px solid var(--line);
-  }
-  .hero-badge{
-    flex:1;
-    min-width:150px;
-    padding:18px 20px 0 0;
-    border-right:1px solid var(--line);
-  }
-  .hero-badge:last-child{border-right:none;}
-  .hero-badge .num{
-    font-family:'Fraunces',serif;
-    font-size:1.5rem;
-    color:var(--brass-deep);
-    display:block;
-  }
-  .hero-badge .lab{
-    font-family:'IBM Plex Mono',monospace;
-    font-size:0.72rem;
-    color:var(--ink-soft);
+    font-size:1.05rem;
   }
 
-  /* About */
-  .about-grid{
-    display:grid;
-    grid-template-columns:1.1fr 0.9fr;
-    gap:64px;
-  }
-  .about-grid p{max-width:56ch;color:var(--ink-soft);}
-  .about-grid p + p{margin-top:16px;}
-  .consent-note{
-    margin-top:28px;
-    padding:16px 18px;
-    background:var(--pine-soft);
-    border-left:2px solid var(--pine);
-    font-size:0.88rem;
-    color:var(--ink);
-  }
-  .value-list{list-style:none;margin:0;padding:0;}
-  .value-list li{
-    padding:16px 0;
-    border-top:1px solid var(--line);
-    display:grid;
-    grid-template-columns:26px 1fr;
-    gap:14px;
-  }
-  .value-list li:last-child{border-bottom:1px solid var(--line);}
-  .value-list .mk{font-family:'IBM Plex Mono',monospace;color:var(--brass-deep);font-size:0.82rem;}
-  .value-list h3{font-size:0.98rem;margin-bottom:4px;}
-  .value-list span{color:var(--ink-soft);font-size:0.88rem;}
+  .about-text p{max-width:58ch;color:var(--ink-soft);margin:0;}
+  .about-text p + p{margin-top:14px;}
 
-  /* Projects */
-  .section-head{
-    display:flex;
-    justify-content:space-between;
-    align-items:flex-end;
-    margin-bottom:48px;
-    gap:24px;
-    flex-wrap:wrap;
-  }
-  .section-head h2{font-size:1.9rem;max-width:20ch;}
-  .section-head .desc{max-width:36ch;color:var(--ink-soft);font-size:0.94rem;}
+  .section-head{margin-bottom:36px;}
+  .section-head h2{font-size:1.7rem;}
 
   .project-list{border-top:1px solid var(--line);}
   .project{
-    padding:30px 0;
+    padding:26px 0;
     border-bottom:1px solid var(--line);
     display:grid;
-    grid-template-columns:210px 1fr 190px;
-    gap:28px;
+    grid-template-columns:190px 1fr 170px;
+    gap:24px;
     align-items:start;
   }
-  .project .p-index{
-    font-family:'IBM Plex Mono',monospace;
-    font-size:0.78rem;
-    color:var(--ink-soft);
-    padding-top:4px;
-  }
-  .project .p-index .stack{
-    display:block;
-    color:var(--brass-deep);
-    margin-top:6px;
-  }
-  .project h3{font-size:1.2rem;margin-bottom:8px;}
+  .project .p-index{font-family:'IBM Plex Mono',monospace;font-size:0.78rem;color:var(--ink-soft);padding-top:4px;}
+  .project .p-index .stack{display:block;color:var(--brass-deep);margin-top:6px;}
+  .project h3{font-size:1.15rem;margin-bottom:8px;}
   .project p{color:var(--ink-soft);font-size:0.92rem;max-width:52ch;}
   .project .p-meta{
     font-family:'IBM Plex Mono',monospace;
@@ -283,452 +339,99 @@
     margin-right:4px;
   }
 
-  /* Skills */
-  .skills-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:1px;
-    background:var(--line);
-    border:1px solid var(--line);
-  }
-  .skill-cell{
-    background:var(--paper-raise);
-    padding:26px 22px;
-  }
-  .skill-cell h3{
-    font-size:0.95rem;
-    font-family:'IBM Plex Mono',monospace;
-    font-weight:600;
-    color:var(--pine);
-    margin-bottom:12px;
-  }
-  .skill-cell ul{margin:0;padding:0;list-style:none;}
-  .skill-cell li{
-    font-size:0.88rem;
-    padding:6px 0;
+  .ethics-list{margin:0;padding:0;list-style:none;max-width:60ch;}
+  .ethics-list li{
+    padding:14px 0;
+    border-top:1px solid var(--line);
     color:var(--ink-soft);
-    border-top:1px dashed var(--line);
+    font-size:0.92rem;
   }
-  .skill-cell li:first-child{border-top:none;}
+  .ethics-list li:last-child{border-bottom:1px solid var(--line);}
 
-  /* Ethics & Safety */
-  .ethics-grid{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:2px;
-    background:var(--line);
-    border:1px solid var(--line);
-    margin-top:10px;
-  }
-  .ethic-card{
-    background:var(--paper-raise);
-    padding:28px 26px;
-  }
-  .ethic-card .mk{
-    font-family:'IBM Plex Mono',monospace;
-    font-size:0.72rem;
-    color:var(--brass-deep);
-    display:block;
-    margin-bottom:10px;
-  }
-  .ethic-card h3{font-size:1.05rem;margin-bottom:8px;}
-  .ethic-card p{font-size:0.88rem;color:var(--ink-soft);margin:0;}
-
-  /* Certifications */
-  .cert-list{display:flex;flex-direction:column;border-top:1px solid var(--line);}
-  .cert{
-    display:grid;
-    grid-template-columns:120px 1fr 140px;
-    gap:20px;
-    padding:20px 0;
-    border-bottom:1px solid var(--line);
-    align-items:center;
-  }
-  .cert .cert-year{font-family:'IBM Plex Mono',monospace;color:var(--ink-soft);font-size:0.8rem;}
-  .cert h3{font-size:1rem;}
-  .cert .issuer{color:var(--ink-soft);font-size:0.85rem;margin-top:3px;}
-  .cert .verify{
-    text-align:right;
-    font-family:'IBM Plex Mono',monospace;
-    font-size:0.72rem;
-  }
-  .verify .v-dot{color:var(--pine);}
-
-  /* Reflection */
-  .reflection{
-    max-width:70ch;
-  }
-  .reflection blockquote{
-    margin:0 0 28px 0;
-    padding-left:20px;
-    border-left:2px solid var(--brass);
-    font-family:'Fraunces',serif;
-    font-size:1.3rem;
-    font-weight:500;
-    line-height:1.45;
-    color:var(--ink);
-  }
-  .reflection p{color:var(--ink-soft);}
-  .reflection p + p{margin-top:16px;}
-
-  /* Contact */
-  .contact-wrap{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:40px;
-  }
-  .contact-card{
-    padding:26px;
-    background:var(--paper-raise);
-    border:1px solid var(--line);
-  }
-  .contact-card h3{font-size:1rem;margin-bottom:14px;}
+  .contact-wrap{display:grid;grid-template-columns:1fr 1fr;gap:32px;}
+  .contact-card{padding:24px;background:var(--paper-raise);border:1px solid var(--line);}
+  .contact-card h3{font-size:1rem;margin-bottom:12px;}
   .contact-row{
     display:flex;justify-content:space-between;
-    padding:10px 0;border-top:1px dashed var(--line);
+    padding:8px 0;
     font-size:0.88rem;
   }
-  .contact-row:first-of-type{border-top:none;}
   .contact-row .lab{color:var(--ink-soft);font-family:'IBM Plex Mono',monospace;font-size:0.76rem;}
-  .safe-note{
-    font-size:0.82rem;color:var(--ink-soft);margin-top:16px;
-    padding-top:16px;border-top:1px solid var(--line);
-  }
 
   footer{
-    padding:36px 72px;
+    padding:32px 64px;
     font-family:'IBM Plex Mono',monospace;
     font-size:0.72rem;
     color:var(--ink-soft);
-    display:flex;justify-content:space-between;
   }
 
   @media (max-width: 900px){
     .layout{grid-template-columns:1fr;}
     nav.rail{position:relative;height:auto;flex-direction:row;align-items:center;justify-content:space-between;padding:20px 24px;}
     .rail-nav{display:none;}
-    section{padding:56px 24px;}
-    .about-grid, .contact-wrap{grid-template-columns:1fr;}
-    .skills-grid{grid-template-columns:1fr;}
-    .ethics-grid{grid-template-columns:1fr;}
+    section{padding:48px 24px;}
+    .contact-wrap{grid-template-columns:1fr;}
     .project{grid-template-columns:1fr;}
     .project .p-meta{text-align:left;}
-    .cert{grid-template-columns:1fr;text-align:left;}
-    .cert .verify{text-align:left;}
-    footer{flex-direction:column;gap:8px;padding:28px 24px;}
+    footer{padding:24px 24px;}
   }
 
-  @media (prefers-reduced-motion: reduce){
-    html{scroll-behavior:auto;}
-  }
+  @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto;}}
 </style>
-</head>
-<body>
 
-<div class="grid-bg"></div>
+<script>
+  function esc(str){
+    const d = document.createElement('div');
+    d.textContent = str;
+    return d.innerHTML;
+  }
 
-<div class="layout">
+  function render(){
+    document.getElementById('nav-initials').textContent = SITE.initials;
+    document.getElementById('nav-name').textContent = SITE.name;
+    document.getElementById('nav-role').textContent = SITE.course;
+    document.getElementById('rail-location').textContent = SITE.location;
+    document.getElementById('rail-updated').textContent = 'Updated ' + SITE.updated;
+    document.title = SITE.name + ' — IT Portfolio';
 
-  <!-- ============ SIDEBAR ============ -->
-  <nav class="rail">
-    <div>
-      <a class="brand" href="#top">
-        <!-- EDIT: your initials, full name, and course -->
-        <div class="brand-mark">DR</div>
-        <span class="brand-name">Dani Reyes</span>
-        <span class="brand-role">BS Information Technology</span>
-      </a>
+    document.getElementById('hero-heading').textContent = SITE.heroHeadline;
+    document.getElementById('hero-intro').textContent = SITE.heroIntro;
 
-      <div class="rail-nav">
-        <a href="#about"><span class="n">01</span> about</a>
-        <a href="#projects"><span class="n">02</span> projects</a>
-        <a href="#skills"><span class="n">03</span> skills</a>
-        <a href="#ethics"><span class="n">04</span> ethics-and-safety</a>
-        <a href="#certifications"><span class="n">05</span> certifications</a>
-        <a href="#reflection"><span class="n">06</span> reflection</a>
-        <a href="#contact"><span class="n">07</span> contact</a>
-      </div>
-    </div>
+    document.getElementById('about-heading').textContent = SITE.aboutHeading;
+    document.getElementById('about-paragraphs').innerHTML = SITE.aboutParagraphs.map(p => `<p>${esc(p)}</p>`).join('');
 
-    <!-- EDIT: your availability, city, and last-updated date -->
-    <div class="rail-foot">
-      <span><span class="status-dot"></span>Available for internships</span><br>
-      Cebu, Philippines<br>
-      Updated Sep 2026
-    </div>
-  </nav>
-
-  <!-- ============ MAIN ============ -->
-  <main>
-
-    <section class="hero" id="top">
-      <span class="path-label">/home</span>
-      <!-- EDIT: your headline (1 sentence) and intro (2-3 sentences) -->
-      <h1>Building software I'd trust with my own data — and documenting how I got there.</h1>
-      <p class="role-line">I'm an IT student focused on secure application development. This portfolio is both a record of my technical work and a working example of publishing that work responsibly: consent, attribution, and safe defaults are treated as part of the craft, not an afterthought.</p>
-
-      <!-- EDIT: the 4 numbers/labels below to match your own stats -->
-      <div class="hero-badges">
-        <div class="hero-badge">
-          <span class="num">6</span>
-          <span class="lab">projects documented</span>
-        </div>
-        <div class="hero-badge">
-          <span class="num">3</span>
-          <span class="lab">certifications earned</span>
-        </div>
-        <div class="hero-badge">
-          <span class="num">0</span>
-          <span class="lab">third-party data exposed</span>
-        </div>
-        <div class="hero-badge">
-          <span class="num">100%</span>
-          <span class="lab">sources attributed</span>
-        </div>
-      </div>
-    </section>
-
-    <section id="about">
-      <span class="path-label">/about</span>
-      <div class="about-grid">
+    document.getElementById('projects-list').innerHTML = SITE.projects.map((p,i) => `
+      <div class="project">
+        <div class="p-index">${String(i+1).padStart(2,'0')}<span class="stack">${esc(p.stack)}</span></div>
         <div>
-          <!-- EDIT: your about-me paragraphs (2 paragraphs) -->
-          <h2 style="font-size:1.9rem;margin-bottom:22px;">A short, honest introduction</h2>
-          <p>I'm a third-year IT student specializing in application security and backend systems. My coursework spans database design, network administration, and software engineering, and I spend most of my free time building small tools that solve problems for people around me.</p>
-          <p>This site exists because a diploma tells you what I completed — it doesn't show how I think, what I've built, or how carefully I handle the responsibility that comes with writing software. The sections below are meant to answer that instead.</p>
-          <!-- EDIT: your consent statement, if it differs from this one -->
-          <div class="consent-note">
-            All names, screenshots, and photos on this site appear with the written consent of the people shown. Group project members are credited individually in each case study below.
-          </div>
+          <h3>${esc(p.title)}</h3>
+          <p>${esc(p.desc)}</p>
+          ${p.tags.map(t => `<span class="tag">${esc(t)}</span>`).join('')}
         </div>
-
-        <ul class="value-list">
-          <li>
-            <span class="mk">01</span>
-            <div><h3>Privacy by default</h3><span>Personal identifiers are minimized or removed before anything is published.</span></div>
-          </li>
-          <li>
-            <span class="mk">02</span>
-            <div><h3>Attribution first</h3><span>Every dataset, library, image, and collaborator is credited at the point of use.</span></div>
-          </li>
-          <li>
-            <span class="mk">03</span>
-            <div><h3>Disclosed AI use</h3><span>Where AI tools assisted a project, that's stated plainly — not hidden or implied as fully manual.</span></div>
-          </li>
-          <li>
-            <span class="mk">04</span>
-            <div><h3>Secure by habit</h3><span>Credentials, tokens, and internal URLs are scrubbed from every screenshot and repo.</span></div>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <section id="projects">
-      <span class="path-label">/projects</span>
-      <div class="section-head">
-        <h2>Selected work</h2>
-        <p class="desc">Each case study below documents scope, my individual contribution, and the safeguards applied before publishing.</p>
-      </div>
-
-      <!-- EDIT: replace the 4 project blocks below with your own.
-           Copy/paste a whole <div class="project">...</div> block to add more. -->
-      <div class="project-list">
-
-        <div class="project">
-          <div class="p-index">01<span class="stack">Flask · PostgreSQL · Docker</span></div>
-          <div>
-            <h3>ClinicQueue — patient intake dashboard</h3>
-            <p>A queue-management system built for a local clinic's capstone partnership. Handles patient check-in and appointment routing. Demo uses synthetic patient records only — no real medical data was used in development or screenshots.</p>
-            <span class="tag">group project</span><span class="tag">healthcare</span><span class="tag">data minimization</span>
-          </div>
-          <div class="p-meta">
-            Role: backend + auth<br>
-            Team of 4, credited below<br>
-            <a href="#">case study →</a>
-          </div>
+        <div class="p-meta">
+          Role: ${esc(p.role)}<br>
+          ${esc(p.note)}<br>
+          <a href="${esc(p.link)}" target="_blank" rel="noopener">${esc(p.linkText)}</a>
         </div>
+      </div>`).join('');
 
-        <div class="project">
-          <div class="p-index">02<span class="stack">React · Node · JWT</span></div>
-          <div>
-            <h3>Ledgerly — student budgeting app</h3>
-            <p>Personal finance tracker with encrypted local storage and no third-party analytics. Built to practice secure authentication patterns: hashed credentials, rate-limited login, and session expiry.</p>
-            <span class="tag">solo project</span><span class="tag">appsec</span>
-          </div>
-          <div class="p-meta">
-            Role: full stack<br>
-            Solo build<br>
-            <a href="#">repo →</a>
-          </div>
-        </div>
+    document.getElementById('ethics-intro').textContent = SITE.ethicsIntro;
+    document.getElementById('ethics-list').innerHTML = SITE.ethics.map(e => `<li>${esc(e)}</li>`).join('');
 
-        <div class="project">
-          <div class="p-index">03<span class="stack">Python · Nmap · CVE-search</span></div>
-          <div>
-            <h3>Home-lab vulnerability audit</h3>
-            <p>A sanctioned scan of my own isolated lab network for a cybersecurity elective. Methodology, scope authorization, and remediation notes are included; no external systems were touched.</p>
-            <span class="tag">coursework</span><span class="tag">scoped &amp; authorized</span>
-          </div>
-          <div class="p-meta">
-            Role: solo<br>
-            Instructor-approved scope<br>
-            <a href="#">report →</a>
-          </div>
-        </div>
+    document.getElementById('contact-email').textContent = SITE.contact.email;
+    document.getElementById('contact-github').textContent = SITE.contact.github;
+    document.getElementById('contact-github').href = 'https://' + SITE.contact.github;
+    document.getElementById('contact-linkedin').textContent = SITE.contact.linkedin;
+    document.getElementById('contact-linkedin').href = 'https://' + SITE.contact.linkedin;
+    document.getElementById('funfact-label').textContent = SITE.contact.funFactLabel;
+    document.getElementById('contact-funfact').textContent = SITE.contact.funFact;
 
-        <div class="project">
-          <div class="p-index">04<span class="stack">SQL · Power BI</span></div>
-          <div>
-            <h3>Campus foot-traffic dashboard</h3>
-            <p>Built from anonymized, aggregated sensor counts provided by campus facilities — never individual-level or identifiable data. Includes a short note on the anonymization method used.</p>
-            <span class="tag">data ethics</span><span class="tag">anonymized dataset</span>
-          </div>
-          <div class="p-meta">
-            Role: data modeling<br>
-            Team of 2, credited below<br>
-            <a href="#">case study →</a>
-          </div>
-        </div>
+    document.getElementById('footer-year').textContent = SITE.footerYear;
+    document.getElementById('footer-name').textContent = SITE.name;
+  }
 
-      </div>
-    </section>
-
-    <section id="skills">
-      <span class="path-label">/skills</span>
-      <div class="section-head">
-        <h2>Technical skills</h2>
-        <p class="desc">Grouped by how I use them day to day, not by resume category.</p>
-      </div>
-
-      <!-- EDIT: swap the skills in each list to your own -->
-      <div class="skills-grid">
-        <div class="skill-cell">
-          <h3>build</h3>
-          <ul>
-            <li>JavaScript / TypeScript</li>
-            <li>Python</li>
-            <li>React &amp; Node.js</li>
-            <li>REST API design</li>
-          </ul>
-        </div>
-        <div class="skill-cell">
-          <h3>store &amp; secure</h3>
-          <ul>
-            <li>PostgreSQL / MySQL</li>
-            <li>Auth &amp; session security</li>
-            <li>OWASP Top 10 basics</li>
-            <li>Encrypted storage patterns</li>
-          </ul>
-        </div>
-        <div class="skill-cell">
-          <h3>operate</h3>
-          <ul>
-            <li>Git &amp; version control</li>
-            <li>Docker</li>
-            <li>Linux administration</li>
-            <li>Basic network diagnostics</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section id="ethics">
-      <span class="path-label">/ethics-and-safety</span>
-      <div class="section-head">
-        <h2>How this site was built responsibly</h2>
-        <p class="desc">The practical decisions behind every page here — because a portfolio about IT should model good IT practice.</p>
-      </div>
-
-      <div class="ethics-grid">
-        <div class="ethic-card">
-          <span class="mk">privacy &amp; consent</span>
-          <h3>Nobody appears without permission</h3>
-          <p>Classmates and collaborators shown in screenshots or named in case studies gave written consent beforehand. Any demo data is synthetic or anonymized.</p>
-        </div>
-        <div class="ethic-card">
-          <span class="mk">copyright</span>
-          <h3>Every asset is licensed or original</h3>
-          <p>Images, icons, and fonts used here are either self-made, royalty-free, or explicitly licensed for reuse, with sources listed in each project's credits.</p>
-        </div>
-        <div class="ethic-card">
-          <span class="mk">responsible ai use</span>
-          <h3>AI assistance is disclosed, not hidden</h3>
-          <p>Where I used an AI tool for drafting, debugging, or ideation, it's noted in the relevant case study, along with what I changed or verified myself.</p>
-        </div>
-        <div class="ethic-card">
-          <span class="mk">account &amp; site security</span>
-          <h3>No credentials, keys, or tokens on display</h3>
-          <p>Every screenshot and repo link was reviewed to remove API keys, passwords, and internal URLs before publishing. 2FA is enabled on all accounts tied to this site.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="certifications">
-      <span class="path-label">/certifications</span>
-      <div class="section-head">
-        <h2>Certifications</h2>
-      </div>
-      <!-- EDIT: your certifications. Copy/paste a <div class="cert">...</div>
-           block to add more, or delete one to have fewer. -->
-      <div class="cert-list">
-        <div class="cert">
-          <span class="cert-year">2026</span>
-          <div><h3>CompTIA Security+</h3><span class="issuer">CompTIA</span></div>
-          <span class="verify"><span class="v-dot">●</span> verified — cert. no. on request</span>
-        </div>
-        <div class="cert">
-          <span class="cert-year">2025</span>
-          <div><h3>Google IT Support Professional Certificate</h3><span class="issuer">Google / Coursera</span></div>
-          <span class="verify"><span class="v-dot">●</span> verified — cert. no. on request</span>
-        </div>
-        <div class="cert">
-          <span class="cert-year">2025</span>
-          <div><h3>Introduction to Cybersecurity</h3><span class="issuer">Cisco Networking Academy</span></div>
-          <span class="verify"><span class="v-dot">●</span> verified — cert. no. on request</span>
-        </div>
-      </div>
-    </section>
-
-    <section id="reflection">
-      <span class="path-label">/reflection</span>
-      <!-- EDIT: your own reflection — this should be genuinely yours, not the sample text -->
-      <div class="reflection">
-        <blockquote>The hardest part of this project wasn't building the portfolio — it was deciding what didn't belong in it.</blockquote>
-        <p>Early drafts of this site included full-resolution screenshots straight from our capstone system, before I noticed a teammate's name was visible in a database record I hadn't meant to show. That small mistake changed how I approached everything after: I started treating "is this safe to publish" as its own step in the workflow, not something to check at the end.</p>
-        <p>I also had to get comfortable saying less. It's tempting to list every tool I've touched, but a shorter, honestly-described list is more credible than an inflated one — and easier to defend in an interview. That tension between presenting myself well and presenting myself accurately is, I think, the real skill this project was teaching.</p>
-        <p>Going forward, I want this portfolio to stay a living document: something I revise as I learn more, rather than a one-time submission I never open again.</p>
-      </div>
-    </section>
-
-    <section id="contact">
-      <span class="path-label">/contact</span>
-      <div class="section-head">
-        <h2>Get in touch</h2>
-      </div>
-      <div class="contact-wrap">
-        <!-- EDIT: your real contact info. Keep it professional-only — no phone/home address. -->
-        <div class="contact-card">
-          <h3>Reach me</h3>
-          <div class="contact-row"><span class="lab">email</span><span>dani.reyes.dev@gmail.com</span></div>
-          <div class="contact-row"><span class="lab">linkedin</span><span>linkedin.com/in/danireyes-it</span></div>
-          <div class="contact-row"><span class="lab">github</span><span>github.com/danireyes</span></div>
-          <div class="safe-note">Only a professional email and public profile links are shared here — no personal phone number or home address is published on this site.</div>
-        </div>
-        <div class="contact-card">
-          <h3>Before you reach out</h3>
-          <p style="font-size:0.88rem;color:var(--ink-soft);">I'm currently looking for a Summer 2027 internship in application security or backend development. Full case studies, code samples, and references are available on request.</p>
-        </div>
-      </div>
-    </section>
-
-  </main>
-</div>
-
-<!-- EDIT: your name and year in the footer -->
-<footer>
-  <span>© 2026 Dani Reyes — built with intention, published with care.</span>
-  <span>site v1.0 · reviewed for privacy &amp; accessibility</span>
-</footer>
+  render();
+</script>
 
 </body>
 </html>
